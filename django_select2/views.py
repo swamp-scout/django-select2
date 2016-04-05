@@ -4,11 +4,16 @@ from __future__ import absolute_import, unicode_literals
 
 from django.core import signing
 from django.core.signing import BadSignature
-from django.http import Http404, JsonResponse
+from django.http import Http404
 from django.views.generic.list import BaseListView
 
 from .cache import cache
 from .conf import settings
+
+try:
+    from django.http import JsonResponse
+except ImportError:
+    from .compat import JsonResponse
 
 
 class AutoResponseView(BaseListView):
