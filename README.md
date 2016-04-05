@@ -9,6 +9,8 @@ Django-Select2
 
 This is a [Django](https://www.djangoproject.com/) integration of [Select2](http://ivaynberg.github.com/select2/).
 
+## Added compatibility with Django 1.6.x
+
 The app includes Select2 driven Django Widgets.
 
 ## Installation
